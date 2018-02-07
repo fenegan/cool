@@ -2,19 +2,21 @@
 
 class Router
 {
-    public function execute($action)
+    public function execute($request)
     {
         global $config;
         
-        if (isset($config['routes'][$action]))
+        if (isset($config['routes'][$request]))
         {
-            $data = explode(':', $config['routes'][$action]);
+            $data = explode(':', $config['routes'][$request]);
             $controller_name = $data[0].'Controller';
             $method_name = $data[1].'Action';
             
             require_once('Controller/'.$controller_name.'.php');
             $controller = new $controller_name;
-            call_user_func(array($controller, $method_name));
+            $response = call_user_func(array($controller, $method_name));
+            
+            return $response;
         }
         else
         {
