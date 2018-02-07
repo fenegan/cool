@@ -12,15 +12,15 @@
   </head>
   <body>
     <h1>Home</h1>
-    <p>Hello <?= $data['username'] ?></p>
+    <p>Hello {{ username }}</p>
 
-    <?php foreach ($data['posts'] as $article): ?>
+    {% for article in posts %}
     <article>
-        <h2><a href="article.php?id=<?= $article['id'] ?>"><?= $article['title'] ?></a></h2>
-        <div><?= nl2br($article['content']) ?></div>
+        <h2><a href="article.php?id={{ article['id'] }}">{{ article['title'] }}</a></h2>
+        <div>{{ article['content']|nl2br }}</div>
     </article>
     <hr>
-    <?php endforeach; ?>
+    {% endfor %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -14,20 +14,18 @@ class MainController
             'posts' => $posts
         ];
         
-        ob_start();
-        require_once('views/home.php');
-        $response = ob_get_contents();
-        ob_end_clean();
+        global $twig;
+        $template = $twig->load('home.html.twig');
+        $response = $template->render($data);
 
         return $response;
     }
 
     public function contactAction()
     {
-        ob_start();
-        require_once('views/contact.php');
-        $response = ob_get_contents();
-        ob_end_clean();
+        global $twig;
+        $template = $twig->load('contact.html.twig');
+        $response = $template->render();
 
         return $response;
     }
