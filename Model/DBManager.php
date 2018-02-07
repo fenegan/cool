@@ -6,9 +6,11 @@ class DBManager
 
     private function __construct()
     {
-        $dsn = 'mysql:dbname=babyblog;host=127.0.0.1';
-        $user = 'babyblog';
-        $password = 'toto42';
+        global $config;
+
+        $dsn = 'mysql:dbname='.$config['db']['name'].';host=127.0.0.1';
+        $user = $config['db']['user'];
+        $password = $config['db']['password'];
         $pdo = new PDO($dsn, $user, $password);
         $this->setPdo($pdo);
     }

@@ -3,8 +3,8 @@
 $config = [
     'homepage_route' => 'home',
     'db' => [
-        'name'     => 'cool',
-        'user'     => 'puck',
+        'name'     => 'babyblog',
+        'user'     => 'babyblog',
         'password' => 'toto42'
     ],
     'routes' => [
