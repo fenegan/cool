@@ -8,12 +8,13 @@ class Router
         
         if (isset($config['routes'][$action]))
         {
-            echo "Action : " . $action;
             $data = explode(':', $config['routes'][$action]);
-            $controller = $data[0];
-            $method = $data[1];
+            $controller_name = $data[0].'Controller';
+            $method_name = $data[1].'Action';
             
-            // TODO : call method $method in Controller $controller
+            require_once('Controller/'.$controller_name.'.php');
+            $controller = new $controller_name;
+            call_user_func(array($controller, $method_name));
         }
         else
         {
