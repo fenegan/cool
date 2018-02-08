@@ -4,8 +4,8 @@ $config = [
     'homepage_route' => 'home',
     'db' => [
         'name'     => 'babyblog',
-        'user'     => 'babyblog',
-        'password' => 'toto42'
+        'user'     => 'root',
+        'password' => ''
     ],
     'routes' => [
         'home'    => 'Main:home',
