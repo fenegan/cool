@@ -47,6 +47,6 @@ class MainController extends BaseController
             $posts = $manager->addPost($title, $content);
         }
 
-        return $this->render('post.html.twig');
+        return $this->render('addArticle.html.twig');
     }
 }
