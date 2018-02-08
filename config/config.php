@@ -11,10 +11,7 @@ $config = [
         'home'    => 'Main:home',
         'article' => 'Main:article',
         'contact' => 'Main:contact',
-<<<<<<< HEAD
         'addArticle' => 'Main:addArticle',
         'test'    => 'Test:coucou',
-=======
->>>>>>> upstream/master
     ]
 ];

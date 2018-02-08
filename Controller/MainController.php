@@ -37,17 +37,19 @@ class MainController extends BaseController
 
     public function addArticleAction()
     {
-        $manager = new PostManager();
-        $posts = $manager->addPosts();
-        
-        $data = [
-            'posts' => $posts
-        ];
-        
-        global $twig;
-        $template = $twig->load('post.html.twig');
-        $response = $template->render($data);
+        if(isset($_POST['title']) && isset($_POST['content'])){
+            $title = $_POST['title'];
+            $content = $_POST['content'];
+            $manager = new PostManager();
+            $posts = $manager->addPosts();
+        }
 
-        return $response;
+        $data = [
+            'posts' => $posts,
+            'title' => $title,
+            'content' => $content
+        ];
+
+        return $this->render('post.html.twig', $data);
     }
 }
