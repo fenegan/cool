@@ -29,4 +29,20 @@ class MainController
 
         return $response;
     }
+
+    public function addArticleAction()
+    {
+        $manager = new PostManager();
+        $posts = $manager->addPosts();
+        
+        $data = [
+            'posts' => $posts
+        ];
+        
+        global $twig;
+        $template = $twig->load('post.html.twig');
+        $response = $template->render($data);
+
+        return $response;
+    }
 }
