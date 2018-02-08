@@ -1,12 +1,7 @@
 # Cool Framework by Sup'Internet DEV 2020
 
-To keep in mind :
-- Filer
-- Pokedex (with an API)
-- Intranet
-
-Installation :
-==============
+Installation
+============
 
 Run
 ```cp config/config.php.dist config/config.php```
@@ -18,3 +13,11 @@ or
 ```php composer.phar install```
 
 You can get composer here : <https://getcomposer.org/download/>
+
+To keep in mind
+===============
+
+- Filer
+- Pokedex (with an API)
+- Intranet
+
