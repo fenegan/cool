@@ -37,4 +37,22 @@ class MainController extends BaseController
     {
         return $this->render('contact.html.twig');
     }
+
+    public function addArticleAction()
+    {
+        if(isset($_POST['title']) && isset($_POST['content'])){
+            $title = $_POST['title'];
+            $content = $_POST['content'];
+            $manager = new PostManager();
+            $posts = $manager->addPost($title, $content);
+        }
+
+        $data = [
+            'posts' => $posts,
+            'title' => $title,
+            'content' => $content
+        ];
+
+        return $this->render('post.html.twig', $data);
+    }
 }

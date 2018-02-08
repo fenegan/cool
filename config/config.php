@@ -13,5 +13,6 @@ $config = [
         'home'    => 'Main:home',
         'article' => 'Main:article',
         'contact' => 'Main:contact',
+        'addArticle' => 'Main:addArticle',
     ]
 ];
