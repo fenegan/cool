@@ -9,7 +9,7 @@ $config = [
     ],
     'routes' => [
         'home'    => 'Main:home',
+        'article' => 'Main:article',
         'contact' => 'Main:contact',
-        'test'    => 'Test:coucou',
     ]
 ];

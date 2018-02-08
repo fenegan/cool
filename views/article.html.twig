@@ -1,0 +1,11 @@
+{% extends 'layout.html.twig' %}
+
+{% block page_title %}{{ parent() }} - {{ article['title']|raw }}{% endblock %}
+
+{% block content %}
+<h1>{{ article['title']|raw }}</h1>
+
+<article>
+    <div>{{ article['content']|raw|nl2br }}</div>
+</article>
+{% endblock %}
