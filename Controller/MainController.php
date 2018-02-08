@@ -2,6 +2,7 @@
 
 require_once('Cool/BaseController.php');
 require_once('Model/PostManager.php');
+require_once('Model/CommentManager.php');
 
 class MainController extends BaseController
 {
@@ -19,11 +20,13 @@ class MainController extends BaseController
     
     public function articleAction()
     {
-        $manager = new PostManager();
-        $post = $manager->getPostById(intval($_GET['id']));
-        
+        $postManager = new PostManager();
+        $post = $postManager->getPostById(intval($_GET['id']));
+        $commentsManager = new CommentManager();
+        $comments = $commentsManager->getCommentsByPost(intval($_GET['id']));
         $data = [
-            'article' => $post
+            'article'   => $post,
+            'comments'  => $comments
         ];
         
         return $this->render('article.html.twig', $data);
