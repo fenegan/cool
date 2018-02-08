@@ -8,4 +8,11 @@
 <article>
     <div>{{ article['content']|raw|nl2br }}</div>
 </article>
+<br>
+<div>
+    <h2>Comments :</h2><br>
+    {% for comment in comments %}
+    <p>{{ comment }}</p>
+    {% endfor %}    
+</div>
 {% endblock %}

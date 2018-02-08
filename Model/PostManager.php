@@ -1,6 +1,7 @@
 <?php
 
 require_once('Cool/DBManager.php');
+require_once('CommentsManager.php');
 
 class PostManager
 {
@@ -23,7 +24,10 @@ class PostManager
         $result = $pdo->prepare("SELECT * FROM posts WHERE id = :id");
         $result->execute([':id' => $id]);
         $post = $result->fetch();
+
+        $commentsManager = new CommentsManager();
+        $comments = $commentsManager->getCommentsByPost($id, $pdo);
         
-        return $post;
+        return [$post, $comments];
     }
 }
