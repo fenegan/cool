@@ -23,7 +23,7 @@ class MainController extends BaseController
         $postManager = new PostManager();
         $post = $postManager->getPostById(intval($_GET['id']));
         $commentsManager = new CommentManager();
-        $comments = $commentsManager->getAllComments(intval($_GET['id']));
+        $comments = $commentsManager->getCommentsByPost(intval($_GET['id']));
         $data = [
             'article'   => $post,
             'comments'  => $comments

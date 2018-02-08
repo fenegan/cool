@@ -4,7 +4,7 @@ require_once('Cool/DBManager.php');
 
 class CommentManager
 {
-    public function getAllComments($id)
+    public function getCommentsByPost($id)
     {
         $dbm = DBManager::getInstance();
         $pdo = $dbm->getPdo();
