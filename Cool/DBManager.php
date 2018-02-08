@@ -7,8 +7,11 @@ class DBManager
     private function __construct()
     {
         global $config;
-
-        $dsn = 'mysql:dbname='.$config['db']['name'].';host=127.0.0.1';
+        
+        $address = $config['db']['host'];
+        if ($config['db']['port'])
+            $address .= ':'.$config['db']['port'];
+        $dsn = 'mysql:dbname='.$config['db']['name'].';host='.$address;
         $user = $config['db']['user'];
         $password = $config['db']['password'];
         $pdo = new PDO($dsn, $user, $password);
