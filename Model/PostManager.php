@@ -1,6 +1,6 @@
 <?php
 
-require_once('Model/DBManager.php');
+require_once('Cool/DBManager.php');
 
 class PostManager
 {
