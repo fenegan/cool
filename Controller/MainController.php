@@ -44,7 +44,7 @@ class MainController extends BaseController
             $title = $_POST['title'];
             $content = $_POST['content'];
             $manager = new PostManager();
-            $posts = $manager->addPosts();
+            $posts = $manager->addPost($title, $content);
         }
 
         $data = [

@@ -15,7 +15,7 @@ class PostManager
         return $posts;
     }
 
-    public function addPosts()
+    public function addPost($title, $content)
     {
         $dbm = DBManager::getInstance();
         $pdo = $dbm->getPdo();

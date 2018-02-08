@@ -3,8 +3,10 @@
 {% block page_title %}{{ parent() }} - Add an Article{% endblock %}
 
 {% block content %}
+<h1>Add and article</h1><br>
+
 <div class="col">
-    <form action="Controller/MainController.php" method="POST">
+    <form action="?action=addArticle" method="POST">
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" name="title" id="title" class="form-control">
