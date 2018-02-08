@@ -3,7 +3,7 @@
 {% block page_title %}{{ parent() }} - Add an Article{% endblock %}
 
 {% block content %}
-<h1>Add and article</h1><br>
+<h1>Add an article</h1><br>
 
 <div class="col">
     <form action="?action=addArticle" method="POST">

@@ -11,8 +11,15 @@
     <title>{% block page_title %}Baby Blog 2{% endblock %}</title>
   </head>
   <body>
-    {% block content %}{% endblock %}
-    
+    <div class="container">
+      <nav class="row">
+        <div class="col"><a href="./">Home</a></div>
+        <div class="col"><a href="?action=addArticle">Add an article</a></div>
+        <div class="col"><a href="?action=contact">Contact</a></div>
+      </nav>
+      
+      {% block content %}{% endblock %}
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
