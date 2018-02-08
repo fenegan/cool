@@ -1,8 +1,9 @@
 <?php
 
+require_once('Cool/BaseController.php');
 require_once('Model/PostManager.php');
 
-class MainController 
+class MainController extends BaseController
 {
     public function homeAction()
     {
@@ -14,19 +15,13 @@ class MainController
             'posts' => $posts
         ];
         
-        global $twig;
-        $template = $twig->load('home.html.twig');
-        $response = $template->render($data);
+        $response = $this->render('home.html.twig', $data);
 
         return $response;
     }
 
     public function contactAction()
     {
-        global $twig;
-        $template = $twig->load('contact.html.twig');
-        $response = $template->render();
-
-        return $response;
+        return $this->render('contact.html.twig');
     }
 }

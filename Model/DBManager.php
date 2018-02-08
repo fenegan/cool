@@ -19,7 +19,7 @@ class DBManager
     
     public static function getInstance()
     {
-        if (!self::$instance)
+        if (self::$instance === NULL)
         {
             self::$instance = new DBManager();
         }
