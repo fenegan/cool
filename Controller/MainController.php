@@ -48,6 +48,8 @@ class MainController extends BaseController
             $content = $_POST['content'];
             $manager = new PostManager();
             $posts = $manager->addPost($title, $content);
+            
+            $this->redirectToRoute('home');
         }
 
         return $this->render('addArticle.html.twig');

@@ -5,12 +5,12 @@ require_once('CommentsManager.php');
 
 class PostManager
 {
-    public function getAllPosts()
+    public function getAllPosts($order = 'DESC')
     {
         $dbm = DBManager::getInstance();
         $pdo = $dbm->getPdo();
         
-        $result = $pdo->query("SELECT * FROM posts");
+        $result = $pdo->query("SELECT * FROM posts ORDER BY id ".$order);
         $posts = $result->fetchAll();
         
         return $posts;
