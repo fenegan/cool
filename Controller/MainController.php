@@ -11,13 +11,23 @@ class MainController extends BaseController
         $posts = $manager->getAllPosts();
         
         $data = [
-            'username' => 'Puck',
             'posts' => $posts
         ];
         
-        $response = $this->render('home.html.twig', $data);
-
-        return $response;
+        return $this->render('home.html.twig', $data);
+    }
+    
+    public function articleAction()
+    {
+        $manager = new PostManager();
+        $post = $manager->getPostById(intval($_GET['id']));
+        
+        $data = [
+            'article' => $post
+        ];
+        
+        return $this->render('article.html.twig', $data);
+        
     }
 
     public function contactAction()

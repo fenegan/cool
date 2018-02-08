@@ -4,11 +4,10 @@
 
 {% block content %}
 <h1>Home</h1>
-<p>Hello {{ username }}</p>
 
 {% for article in posts %}
 <article>
-    <h2>{{ loop.index }} <a href="article.php?id={{ article['id'] }}">{{ article['title'] }}</a></h2>
+    <h2>{{ loop.index }} <a href="?action=article&amp;id={{ article['id'] }}">{{ article['title'] }}</a></h2>
     <div>{{ article['content']|nl2br }}</div>
 </article>
 <hr>
