@@ -1,0 +1,15 @@
+<?php
+
+$config = [
+    'homepage_route' => 'home',
+    'db' => [
+        'name'     => 'cool',
+        'user'     => 'root',
+        'password' => '',
+        'host'     => '127.0.0.1',
+        'port'     => NULL
+    ],
+    'routes' => [
+        'home'    => 'Main:home',
+    ]
+];
