@@ -2,7 +2,7 @@
 
 require_once('Cool/BaseController.php');
 require_once('Model/PostManager.php');
-require_once ('Model/CommentManager.php');
+require_once('Model/CommentManager.php');
 
 class MainController extends BaseController
 {
