@@ -12,6 +12,5 @@ $config = [
         'article' => 'Main:article',
         'contact' => 'Main:contact',
         'addArticle' => 'Main:addArticle',
-        'test'    => 'Test:coucou',
     ]
 ];
