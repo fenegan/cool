@@ -1,4 +1,4 @@
-# cool
+# Cool Framework by Sup'Internet DEV 2020
 
 To keep in mind :
 - Filer
