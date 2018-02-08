@@ -5,7 +5,7 @@ $config = [
     'db' => [
         'name'     => 'babyblog',
         'user'     => 'babyblog',
-        'password' => 'M3HTinpAl1HhzDNd'
+        'password' => 'toto42'
     ],
     'routes' => [
         'home'    => 'Main:home',
