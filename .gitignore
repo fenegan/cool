@@ -2,3 +2,4 @@
 /vendor
 composer.phar
 /config/config.php
+/config/config.yml

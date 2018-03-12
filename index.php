@@ -1,8 +1,11 @@
 <?php
 
-require_once('config/config.php');
 require_once('Routing/Router.php');
 require_once('vendor/autoload.php');
+
+use Symfony\Component\Yaml\Yaml;
+
+$config = Yaml::parseFile('config/config.yml');
 
 $loader = new Twig_Loader_Filesystem('views');
 $twig = new Twig_Environment($loader, array(

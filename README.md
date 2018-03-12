@@ -4,9 +4,9 @@ Installation
 ============
 
 Run
-```cp config/config.php.dist config/config.php```
+```cp config/config.yml.dist config/config.yml```
 
-Add your config to config.php
+Add your config to config.yml
 Run
 ```composer install```
 or
