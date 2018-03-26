@@ -1,5 +1,7 @@
 <?php
 
+namespace Routing;
+
 class Router
 {
     public function execute($request)

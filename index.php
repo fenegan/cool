@@ -1,9 +1,9 @@
 <?php
 
-require_once('Routing/Router.php');
 require_once('vendor/autoload.php');
 
 use Symfony\Component\Yaml\Yaml;
+use Routing\Router;
 
 $config = Yaml::parseFile('config/config.yml');
 
