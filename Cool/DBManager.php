@@ -1,5 +1,7 @@
 <?php
 
+namespace Cool;
+
 class DBManager
 {
     private $pdo;
