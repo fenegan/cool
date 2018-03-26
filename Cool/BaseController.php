@@ -1,5 +1,7 @@
 <?php
 
+namespace Cool;
+
 class BaseController
 {
     protected function render($view, $data = [])

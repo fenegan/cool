@@ -1,6 +1,8 @@
 <?php
 
-require_once('Cool/BaseController.php');
+namespace Controller;
+
+use Cool\BaseController;
 
 class MainController extends BaseController
 {
