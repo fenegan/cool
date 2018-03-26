@@ -4,9 +4,9 @@ Installation
 ============
 
 Run
-```cp config/config.yml.dist config/config.yml```
+```cp config/parameters.yml.dist config/parameters.yml```
 
-Add your config to config.yml
+Add your config to parameters.yml
 Run
 ```composer install```
 or
@@ -20,4 +20,3 @@ To keep in mind
 - Filer
 - Pokedex (with an API)
 - Intranet
-
