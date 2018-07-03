@@ -6,7 +6,7 @@ use Cool\BaseController;
 
 class MainController extends BaseController
 {
-    public function homeAction()
+    public function home()
     {
         return $this->render('home.html.twig');
     }
