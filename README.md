@@ -3,6 +3,8 @@
 Installation
 ============
 
+A virtual host must be set to the root of the document so the routing can work. Otherwise, URI will be misinterpreted and routing will fail.
+
 Run
 ```cp config/parameters.yml.dist config/parameters.yml```
 
@@ -14,9 +16,4 @@ or
 
 You can get composer here : <https://getcomposer.org/download/>
 
-To keep in mind
-===============
-
-- Filer
-- Pokedex (with an API)
-- Intranet
+During development, you can use (and you should) run `gulp watch` so `.scss` files will be compiled into `.css` files.
